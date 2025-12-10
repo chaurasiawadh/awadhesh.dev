@@ -566,6 +566,16 @@ main {
   margin-bottom: 15px;
 }
 
+.about-text a {
+  display: inline;
+  color: var(--white-2);
+  transition: color var(--transition-1);
+}
+
+.about-text a:hover {
+  color: var(--orange-yellow-crayola);
+}
+
 
 
 /**
@@ -939,7 +949,11 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
 
+.timeline-text a {
+  color: aqua;
+  display: inline;
 }
 
 .duration {
