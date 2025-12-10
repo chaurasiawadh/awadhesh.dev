@@ -107,23 +107,7 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
-// contact form variables
-const form = document.querySelector('[data-form]');
-const formInputs = document.querySelectorAll('[data-form-input]');
-const formBtn = document.querySelector('[data-form-btn]');
 
-// add event to all form input fields
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener('input', function () {
-    if (form && formBtn) {
-      if (form.checkValidity()) {
-        formBtn.removeAttribute('disabled');
-      } else {
-        formBtn.setAttribute('disabled', '');
-      }
-    }
-  });
-}
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll('[data-nav-link]');
@@ -249,36 +233,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (!submitBtn || !submitBtnText) return;
+    console.log('Contact form submitted');
 
-    submitBtn.disabled = true;
+    if (!submitBtn || !submitBtnText) {
+      console.error('Submit button or text element not found');
+      return;
+    }
+
     const originalText = submitBtnText.textContent;
-    submitBtnText.textContent = 'Sending...';
 
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          showToast('Message sent successfully!', true);
-          form.reset();
-          checkFormValidity();
-        } else {
-          showToast('Unable to send message! Please try again.', false);
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        showToast('Unable to send message! Please try again.', false);
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtnText.textContent = originalText;
-      });
+    try {
+      submitBtn.disabled = true;
+      submitBtnText.textContent = 'Sending...';
+
+      const formData = new FormData(form);
+      const fullname = formData.get('fullname');
+      const email = formData.get('email');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+
+      let locationInfo = 'Location: Not Shared';
+
+      try {
+        // Attempt to get user location with a 5-second timeout
+        const position = await new Promise((resolve, reject) => {
+          navigator.geolocation.getCurrentPosition(resolve, reject, {
+            timeout: 5000
+          });
+        });
+        const { latitude, longitude } = position.coords;
+        locationInfo = `Location: https://www.google.com/maps?q=${latitude},${longitude}`;
+      } catch (locError) {
+        console.warn('Location access denied or timed out:', locError);
+      }
+
+      const whatsappMessage = `New Contact Request via Portfolio:
+
+Name: ${fullname}
+Email: ${email}
+Subject: ${subject}
+${locationInfo}
+
+Message: ${message}`;
+
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/919936169852?text=${encodedMessage}`;
+      console.log('Redirecting to:', whatsappUrl);
+
+      window.open(whatsappUrl, '_blank');
+
+      // Simulate success since we can't track cross-origin open
+      showToast('Redirecting to WhatsApp...', true);
+      form.reset();
+      checkFormValidity();
+    } catch (error) {
+      console.error('Error handling form submission:', error);
+      showToast('An error occurred. Please try again.', false);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtnText.textContent = originalText;
+    }
   });
 });
