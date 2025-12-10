@@ -3,12 +3,12 @@
  * Imports and initializes all components
  */
 
-import { Sidebar } from '../components/sidebar/Sidebar.js';
-import { Navbar } from '../components/navbar/Navbar.js';
-import { ProjectFilter } from '../components/portfolio/ProjectFilter.js';
-import { ExperienceCalculator } from '../components/resume/ExperienceCalculator.js';
-import { ContactForm } from '../components/contact/ContactForm.js';
-import { Modal } from '../components/shared/Modal.js';
+import { Sidebar } from '../../components/sidebar/Sidebar.js';
+import { Navbar } from '../../components/navbar/Navbar.js';
+import { ProjectFilter } from '../../components/portfolio/ProjectFilter.js';
+import { ExperienceCalculator } from '../../components/resume/ExperienceCalculator.js';
+import { ContactForm } from '../../components/contact/ContactForm.js';
+import { Modal } from '../../components/shared/Modal.js';
 
 // Initialize all components when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
