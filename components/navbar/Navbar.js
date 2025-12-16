@@ -11,23 +11,29 @@ export class Navbar {
   }
 
   init() {
-    this.navigationLinks.forEach((link, index) => {
+    this.navigationLinks.forEach((link) => {
       link.addEventListener('click', () => {
-        const targetPage = link.innerHTML.toLowerCase();
-        this.navigateToPage(targetPage, index);
+        const targetPage = link.dataset.navLink;
+        this.navigateToPage(targetPage);
       });
     });
   }
 
-  navigateToPage(targetPage, _linkIndex) {
-    this.pages.forEach((page, pageIndex) => {
+  navigateToPage(targetPage) {
+    this.pages.forEach((page) => {
       if (page.dataset.page === targetPage) {
         page.classList.add('active');
-        this.navigationLinks[pageIndex].classList.add('active');
         window.scrollTo(0, 0);
       } else {
         page.classList.remove('active');
-        this.navigationLinks[pageIndex].classList.remove('active');
+      }
+    });
+
+    this.navigationLinks.forEach((link) => {
+      if (link.dataset.navLink === targetPage) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
   }
