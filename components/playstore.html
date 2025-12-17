@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Store Apps - Awadhesh Chaurasia</title>
+
+    <!--
+    - favicon
+  -->
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: var(--eerie-black-1);
+            color: var(--white-2);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: var(--shadow-1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--white-1);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .category {
+            color: var(--orange-yellow-crayola);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .channel-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--border-gradient-onyx);
+            color: var(--orange-yellow-crayola);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-1);
+        }
+
+        .channel-link:hover {
+            box-shadow: 0 0 10px rgba(255, 219, 112, 0.2);
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--jet);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--white-1);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--light-gray);
+        }
+
+        .app-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .app-links li {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .app-card {
+            background: var(--onyx);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--jet);
+            transition: var(--transition-1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-2);
+        }
+
+        .app-card h3 {
+            color: var(--white-1);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .app-action {
+            margin-top: auto;
+            display: inline-block;
+            color: var(--orange-yellow-crayola);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: var(--orange-yellow-crayola);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-1);
+        }
+
+        .back-link:hover {
+            color: var(--white-1);
+        }
+
+        strong {
+            color: var(--white-1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Play Store Apps</h1>
+            <p class="category">Mobile Development • React Native</p>
+            <a href="https://play.google.com/store/apps/developer?id=Awadhesh+Chaurasia" target="_blank"
+                class="channel-link">Visit Developer Channel</a>
+        </header>
+
+        <section>
+            <p>
+                A collection of mobile applications developed using React Native, focused on UI excellence and data
+                visualization. These apps serve as learning resources and open-source contributions to the community.
+            </p>
+
+            <ul class="app-links">
+                <li>
+                    <div class="app-card">
+                        <h3>React Native UI</h3>
+                        <p>
+                            A showcase of beautiful, ready-to-use UI components for React Native. Learn how to build
+                            modern interfaces with clean code.
+                            <br><br>
+                            <strong>Status:</strong> 10K+ Downloads<br>
+                            <strong>Type:</strong> Open Source
+                        </p>
+                        <a href="https://play.google.com/store/apps/details?id=com.ravi" target="_blank"
+                            class="app-action">View on Play Store →</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="app-card">
+                        <h3>React Native Charts</h3>
+                        <p>
+                            A comprehensive library of customizable charts and graphs. visualize your data effectively
+                            with smooth animations and responsive design.
+                            <br><br>
+                            <strong>Type:</strong> Open Source
+                        </p>
+                        <a href="https://play.google.com/store/apps/details?id=com.charts" target="_blank"
+                            class="app-action">View on Play Store →</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+    <!-- Ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplici.io - Portfolio Details</title>
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: var(--eerie-black-1);
+            /* Match main theme background */
+            color: var(--light-gray);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow-1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            background: var(--bg-gradient-jet);
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: var(--shadow-2);
+        }
+
+        h1 {
+            color: var(--white-2);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: var(--orange-yellow-crayola);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: var(--border-gradient-onyx);
+            color: var(--orange-yellow-crayola);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-1);
+            box-shadow: var(--shadow-2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            background: var(--bg-gradient-jet);
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            color: var(--white-2);
+            transform: translateY(-2px);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--white-2);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--jet);
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li::before {
+            content: "▹";
+            color: var(--orange-yellow-crayola);
+            position: absolute;
+            left: 0;
+        }
+
+        strong {
+            color: var(--white-1);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--jet);
+            color: var(--orange-yellow-crayola);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--light-gray-70);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: var(--orange-yellow-crayola);
+        }
+
+        /* Reuse variables just in case */
+        :root {
+            --eerie-black-1: hsl(240, 2%, 12%);
+            --eerie-black-2: hsl(240, 2%, 12%);
+            --jet: hsl(240, 1%, 17%);
+            --white-1: hsl(0, 0%, 100%);
+            --white-2: hsl(0, 0%, 98%);
+            --orange-yellow-crayola: hsl(45, 100%, 71%);
+            --vegas-gold: hsl(45, 54%, 58%);
+            --light-gray: hsl(0, 0%, 84%);
+            --light-gray-70: hsla(0, 0%, 84%, 0.7);
+            --bg-gradient-onyx: linear-gradient(to bottom right,
+                    hsl(240, 1%, 25%) 3%,
+                    hsl(0, 0%, 19%) 97%);
+            --bg-gradient-jet: linear-gradient(to bottom right,
+                    hsla(240, 1%, 18%, 0.251) 0%,
+                    hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+            --border-gradient-onyx: linear-gradient(to bottom right,
+                    hsl(0, 0%, 25%) 0%,
+                    hsla(0, 0%, 25%, 0) 50%);
+            --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+            --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+            --transition-1: 0.25s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="../assets/images/project-5.png" alt="Simplici.io Logo">
+            <h1>Simplici.io</h1>
+            <p class="subtitle">5X Faster Onboarding</p>
+            <div class="tag">Team Work - ID Verification Platform</div>
+        </div>
+
+        <div class="links">
+            <a href="https://simplici.io/" target="_blank" class="btn">
+                <ion-icon name="globe-outline"></ion-icon> Visit Website
+            </a>
+        </div>
+
+        <section>
+            <h2>About</h2>
+            <p>
+                Provide customers with a fast, fraud-proof account setup with AI-driven ID verification and biometric
+                authentication.
+                Customize onboarding flows swiftly with our user-friendly builder. Seamlessly integrate into your site
+                or share via QR code, email, or text.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>AI-Driven ID Verification:</strong> Advanced technology to prevent fraud and ensuring secure
+                    user identity.</li>
+                <li><strong>Biometric Authentication:</strong> Secure and fast access using biometric data.</li>
+                <li><strong>Customizable Flows:</strong> User-friendly builder to create tailored onboarding experiences
+                    swiftly.</li>
+                <li><strong>Seamless Integration:</strong> Easily integrate into your site or share access via QR code,
+                    email, or text.</li>
+                <li><strong>Speed:</strong> Designed to make onboarding 5X faster for your customers.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Team</h2>
+            <ul>
+                <li><strong>Awadhesh Chaurasia</strong></li>
+                <li><strong><a href="https://www.linkedin.com/in/shahbaaz-ali-77166417a/" target="_blank"
+                            style="color: var(--white-1); text-decoration: none;">Shahbaaz Ali</a></strong></li>
+                <li><strong><a href="https://www.linkedin.com/in/rahul-srivastava-059930156/" target="_blank"
+                            style="color: var(--white-1); text-decoration: none;">Rahul Srivastava</a></strong> (Backend
+                    Engineer)</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+    <!-- Ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
