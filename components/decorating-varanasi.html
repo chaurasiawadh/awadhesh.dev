@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Decorating Varanasi - Awadhesh Chaurasia</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: var(--eerie-black-1);
+            color: var(--white-2);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: var(--shadow-1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--white-1);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .category {
+            color: var(--orange-yellow-crayola);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .img-box {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--jet);
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--white-1);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--light-gray);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--light-gray);
+        }
+
+        li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--orange-yellow-crayola);
+        }
+
+        .action-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: var(--border-gradient-onyx);
+            color: var(--orange-yellow-crayola);
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-1);
+        }
+
+        .action-link:hover {
+            box-shadow: 0 0 10px rgba(255, 219, 112, 0.2);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: var(--orange-yellow-crayola);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-1);
+        }
+
+        .back-link:hover {
+            color: var(--white-1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>The Decorating Varanasi</h1>
+            <p class="category">Event Management • Dynamic Web App</p>
+        </header>
+
+        <div class="img-box">
+            <img src="../assets/images/project-1.png" alt="The Decorating Varanasi">
+        </div>
+
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                A dynamic Event Management website built and deployed in just <strong>1 Day using AI</strong>. This
+                comprehensive web application streamlines the organization of events through a dual-interface system,
+                catering effectively to both administrators and end-users.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Rapid Development:</strong> Conceived, developed, and deployed within a single day.</li>
+                <li><strong>Dynamic Web App:</strong> Features real-time content updates, ensuring the latest event
+                    information is always available.</li>
+                <li><strong>Admin Panel:</strong> A robust backend interface allowing full control over event listings,
+                    detailed descriptions, and gallery images.</li>
+                <li><strong>User Interface:</strong> A clean, responsive front-end that allows users to browse events
+                    and view galleries seamlessly.</li>
+            </ul>
+        </section>
+
+        <section>
+            <a href="https://nagarikapp.gov.np/" target="_blank" class="action-link">Visit Website</a>
+        </section>
+
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
