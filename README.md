@@ -137,7 +137,7 @@ MIT License - feel free to use this portfolio as inspiration for your own!
 ## 👤 Author
 
 **Awadhesh Chaurasia**  
-Technical Lead & Senior Frontend Engineer
+Senior Frontend Engineer
 
 - LinkedIn: [@chaurasiawadh](https://www.linkedin.com/in/chaurasiawadh)
 - GitHub: [@chaurasiawadh](https://github.com/chaurasiawadh)
