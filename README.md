@@ -1,6 +1,6 @@
 # Awadhesh Chaurasia - Personal Portfolio
 
-A modern, clean portfolio website showcasing my work as a Technical Lead & Senior Frontend Engineer.
+A modern, clean portfolio website showcasing my work as a Senior Software Engineer.
 
 ## 🚀 Technology Stack
 
