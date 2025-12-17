@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="envelopeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Rectangle Background -->
+  <rect x="0" y="0" width="512" height="512" fill="#f0f4f8" />
+  
+  <!-- Main Envelope -->
+  <g transform="translate(106, 136)" filter="url(#shadow)">
+    <!-- Envelope Body -->
+    <rect x="0" y="0" width="300" height="200" rx="15" ry="15" fill="url(#envelopeGradient)" />
+    <!-- Envelope Flap -->
+    <path d="M0 0 L150 110 L300 0" fill="#e0f7fa" opacity="0.6"/>
+    <path d="M0 0 L150 110 L300 0" fill="none" stroke="#fff" stroke-width="2"/>
+  </g>
+  
+  <!-- Fetching Arrow/Motion -->
+  <g transform="translate(156, 300)" fill="#0fccce">
+    <path d="M100 0 L140 40 L60 40 Z" transform="rotate(180 100 20) translate(0, 10)"/>
+    <rect x="85" y="-50" width="30" height="70" rx="5" />
+    <!-- Speed lines -->
+    <rect x="40" y="-30" width="20" height="6" rx="3" opacity="0.6"/>
+    <rect x="20" y="-10" width="40" height="6" rx="3" opacity="0.4"/>
+    <rect x="140" y="-30" width="20" height="6" rx="3" opacity="0.6"/>
+    <rect x="140" y="-10" width="40" height="6" rx="3" opacity="0.4"/>
+  </g>
+  
+</svg>
