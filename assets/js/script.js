@@ -25,5 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
   new ContactForm();
   new Modal();
 
+  // Map skeleton loader
+  const mapIframe = document.querySelector('.mapbox iframe');
+  const skeletonLoader = document.querySelector('.map-skeleton-loader');
+  
+  if (mapIframe && skeletonLoader) {
+    mapIframe.addEventListener('load', function() {
+      // Add a small delay to ensure smooth transition
+      setTimeout(() => {
+        skeletonLoader.classList.add('hidden');
+      }, 300);
+    });
+  }
+
   console.log('Portfolio app initialized');
 });
