@@ -28,15 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // Map skeleton loader
   const mapIframe = document.querySelector('.mapbox iframe');
   const skeletonLoader = document.querySelector('.map-skeleton-loader');
-  
+
   if (mapIframe && skeletonLoader) {
-    mapIframe.addEventListener('load', function() {
+    mapIframe.addEventListener('load', function () {
       // Add a small delay to ensure smooth transition
       setTimeout(() => {
         skeletonLoader.classList.add('hidden');
       }, 300);
     });
   }
+
+  // Portfolio image skeleton loaders
+  const portfolioImages = document.querySelectorAll('.project-img img');
+
+  portfolioImages.forEach(img => {
+    const figure = img.closest('.project-img');
+
+    if (img.complete) {
+      // Image already loaded (from cache)
+      figure.classList.add('loaded');
+    } else {
+      // Wait for image to load
+      img.addEventListener('load', function () {
+        setTimeout(() => {
+          figure.classList.add('loaded');
+        }, 200);
+      });
+
+      // Handle error case
+      img.addEventListener('error', function () {
+        figure.classList.add('loaded');
+      });
+    }
+  });
 
   console.log('Portfolio app initialized');
 });
