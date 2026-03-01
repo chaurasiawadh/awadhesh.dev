@@ -65,9 +65,44 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  /* Using flex to position the badge properly below the image */
   position: relative;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 12px; */
+  /* border-radius: 20px; */
+  /* preserved from original */
+}
+
+.img-wrapper {
+  background: var(--bg-gradient-onyx);
+  border-radius: inherit;
+  position: relative;
+}
+
+.img-wrapper img {
+  border-radius: 20px 20px 0 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Open To Work Badge */
+.open-to-work-badge {
+  background: linear-gradient(135deg, #2aa956, #1c7c3d);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .active-status {
