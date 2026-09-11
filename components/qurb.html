@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qurb - Portfolio Details</title>
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: var(--eerie-black-1);
+            color: var(--light-gray);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow-1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            background: var(--bg-gradient-jet);
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: var(--shadow-2);
+        }
+
+        h1 {
+            color: var(--white-2);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: var(--orange-yellow-crayola);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: var(--border-gradient-onyx);
+            color: var(--orange-yellow-crayola);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-1);
+            box-shadow: var(--shadow-2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            background: var(--bg-gradient-jet);
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            color: var(--white-2);
+            transform: translateY(-2px);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--white-2);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--jet);
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li::before {
+            content: "▹";
+            color: var(--orange-yellow-crayola);
+            position: absolute;
+            left: 0;
+        }
+
+        strong {
+            color: var(--white-1);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--light-gray-70);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: var(--orange-yellow-crayola);
+        }
+
+        :root {
+            --eerie-black-1: hsl(240, 2%, 12%);
+            --eerie-black-2: hsl(240, 2%, 12%);
+            --jet: hsl(240, 1%, 17%);
+            --white-1: hsl(0, 0%, 100%);
+            --white-2: hsl(0, 0%, 98%);
+            --orange-yellow-crayola: hsl(45, 100%, 71%);
+            --vegas-gold: hsl(45, 54%, 58%);
+            --light-gray: hsl(0, 0%, 84%);
+            --light-gray-70: hsla(0, 0%, 84%, 0.7);
+            --bg-gradient-onyx: linear-gradient(to bottom right,
+                    hsl(240, 1%, 25%) 3%,
+                    hsl(0, 0%, 19%) 97%);
+            --bg-gradient-jet: linear-gradient(to bottom right,
+                    hsla(240, 1%, 18%, 0.251) 0%,
+                    hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+            --border-gradient-onyx: linear-gradient(to bottom right,
+                    hsl(0, 0%, 25%) 0%,
+                    hsla(0, 0%, 25%, 0) 50%);
+            --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+            --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+            --transition-1: 0.25s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="../assets/images/qurb.png" alt="Qurb Logo">
+            <h1>Qurb</h1>
+            <p class="subtitle">Muslim Marriage App</p>
+        </div>
+
+        <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.qalbi" target="_blank" class="btn">
+                <ion-icon name="logo-google-playstore"></ion-icon> Play Store
+            </a>
+            <a href="https://apps.apple.com/in/app/qurb-muslim-marriage-app/id6760386620" target="_blank" class="btn">
+                <ion-icon name="logo-apple"></ion-icon> App Store
+            </a>
+        </div>
+
+        <section>
+            <h2>About</h2>
+            <p>
+                Qurb is a Muslim marriage app built to help people find meaningful matches with a
+                focused, respectful, and modern mobile experience on both Android and iOS.
+            </p>
+            <p>
+                As the lead freelance engineer on the project, I worked across performance, release
+                automation, and product polish — taking the app from active development through
+                Play Store and App Store launch.
+            </p>
+        </section>
+
+        <section>
+            <h2>What I Built</h2>
+            <ul>
+                <li><strong>App performance:</strong> Optimized startup and screen loading with profiling, lazy loading, and leaner render paths.</li>
+                <li><strong>CI/CD with Fastlane:</strong> Automated Android and iOS builds, signing, and store-ready deploy workflows.</li>
+                <li><strong>Release engineering:</strong> Streamlined beta and production releases for faster, more reliable shipping.</li>
+                <li><strong>Product quality:</strong> Improved onboarding, matching flows, and overall app stability ahead of launch.</li>
+                <li><strong>Store delivery:</strong> Shipped production builds to Google Play and the Apple App Store.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Role</h2>
+            <ul>
+                <li><strong>Freelance Software Engineer</strong> — January 2026 to June 2026</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "awadhesh-portfolio",
   "version": "1.0.0",
-  "description": "Personal portfolio website for Awadhesh Chaurasia - Senior Software Engineer",
+  "description": "Personal portfolio website for Awadhesh Chaurasia - Technical Lead",
   "type": "module",
   "scripts": {
     "dev": "vite",
