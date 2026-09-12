@@ -7,16 +7,16 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://awadhesh.in/components/sitein2days.html</loc>
+    <loc>https://awadhesh.in/components/decorating-varanasi.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://awadhesh.in/components/qurb.html</loc>
+    <loc>https://awadhesh.in/components/instaclean.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://awadhesh.in/components/liquidity.html</loc>
@@ -31,27 +31,21 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://awadhesh.in/components/instaclean.html</loc>
+    <loc>https://awadhesh.in/components/qurb.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://awadhesh.in/components/sitein2days.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://awadhesh.in/components/playstore.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://awadhesh.in/components/decorating-varanasi.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://awadhesh.in/policy/linkedin-jobseekers-privacy-policy.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

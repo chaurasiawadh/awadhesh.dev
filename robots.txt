@@ -2,9 +2,10 @@
 User-agent: *
 Allow: /
 
-# Personal portfolio — allow crawling of CSS/JS/images for rendering
 Allow: /assets/
 Allow: /components/
 
-# Sitemap
+# Official resume PDF may be crawled via on-page links
+Allow: /assets/resume.pdf
+
 Sitemap: https://awadhesh.in/sitemap.xml
