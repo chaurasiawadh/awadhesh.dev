@@ -8,6 +8,7 @@ describe('Sidebar Component', () => {
   let sidebar;
 
   beforeEach(() => {
+    window.__portfolioSidebarBound = false;
     // Set up DOM
     document.body.innerHTML = `
       <aside class="sidebar" data-sidebar>

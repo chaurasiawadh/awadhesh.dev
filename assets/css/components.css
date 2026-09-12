@@ -277,10 +277,10 @@
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
+  align-items: center;
+  gap: 12px;
   margin: 0 -15px;
-  padding: 25px;
+  padding: 20px 25px;
   padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -290,12 +290,16 @@
 }
 
 .clients-item {
-  min-width: 50%;
+  flex: 0 0 auto;
+  min-width: 72px;
+  max-width: 72px;
   scroll-snap-align: start;
 }
 
 .clients-item img {
   width: 100%;
+  height: auto;
+  display: block;
   transition: var(--transition-1);
 }
 
@@ -1027,7 +1031,8 @@ textarea.form-input::-webkit-resizer {
      */
 
   .clients-item {
-    min-width: calc(33.33% - 10px);
+    min-width: 80px;
+    max-width: 80px;
   }
 
   /**
@@ -1104,12 +1109,12 @@ textarea.form-input::-webkit-resizer {
      */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 170px;
     margin-bottom: 30px;
   }
 
   .sidebar.active {
-    max-height: 584px;
+    max-height: 640px;
   }
 
   .sidebar-info {
@@ -1117,11 +1122,34 @@ textarea.form-input::-webkit-resizer {
   }
 
   .avatar-box {
-    border-radius: 30px;
+    width: 120px;
   }
 
-  .avatar-box img {
+  .img-wrapper {
+    border-radius: 24px;
+  }
+
+  .avatar-box img,
+  .img-wrapper img {
     width: 120px;
+    height: 120px;
+    border-radius: 0;
+  }
+
+  .active-status {
+    width: 16px;
+    height: 16px;
+    right: -3px;
+    bottom: -3px;
+  }
+
+  .open-to-work-badge {
+    font-size: 10px;
+    padding: 18px 8px 7px;
+  }
+
+  .info-content {
+    padding-right: 0;
   }
 
   .info-content .name {
@@ -1130,12 +1158,18 @@ textarea.form-input::-webkit-resizer {
 
   .info-content .title {
     padding: 5px 18px;
+    font-size: var(--fs-8);
   }
 
   .info_more-btn {
     top: -30px;
     right: -30px;
+    width: auto;
+    height: auto;
     padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .info_more-btn span {
@@ -1166,14 +1200,16 @@ textarea.form-input::-webkit-resizer {
 
   .navbar {
     border-radius: 20px 20px 0 0;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
   }
 
   .navbar-list {
-    gap: 20px;
+    gap: 8px;
   }
 
   .navbar-link {
-    --fs-8: 14px;
+    font-size: 13px;
+    padding: 12px 8px;
   }
 
   /**
@@ -1283,14 +1319,15 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 50px;
+    gap: 16px;
     margin: 0 -30px;
-    padding: 45px;
+    padding: 30px 45px;
     scroll-padding-inline: 45px;
   }
 
   .clients-item {
-    min-width: calc(33.33% - 35px);
+    min-width: 84px;
+    max-width: 84px;
   }
 
   /**
@@ -1527,15 +1564,37 @@ textarea.form-input::-webkit-resizer {
     border-radius: 0 20px;
     padding: 0 20px;
     box-shadow: none;
+    background: hsla(240, 1%, 17%, 0.75);
+    border: 1px solid var(--jet);
+    backdrop-filter: blur(10px);
   }
 
   .navbar-list {
+    display: flex;
+    grid-template-columns: none;
     gap: 30px;
     padding: 0 20px;
+    width: auto;
   }
 
   .navbar-link {
     font-weight: var(--fw-500);
+    width: auto;
+    padding: 20px 7px;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: var(--fs-8);
+  }
+
+  .navbar-link.active {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .navbar-link:hover,
+  .navbar-link:focus {
+    background: transparent;
   }
 
   /**
@@ -1558,7 +1617,8 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    min-width: calc(25% - 38px);
+    min-width: 88px;
+    max-width: 88px;
   }
 
   /**
@@ -1662,8 +1722,35 @@ textarea.form-input::-webkit-resizer {
     flex-direction: column;
   }
 
-  .avatar-box img {
+  .info-content {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .avatar-box {
     width: 150px;
+  }
+
+  .img-wrapper {
+    border-radius: 28px;
+  }
+
+  .avatar-box img,
+  .img-wrapper img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .active-status {
+    width: 18px;
+    height: 18px;
+    right: -3px;
+    bottom: -3px;
+  }
+
+  .open-to-work-badge {
+    font-size: 11px;
+    padding: 22px 10px 8px;
   }
 
   .info-content .name {

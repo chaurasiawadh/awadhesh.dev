@@ -51,7 +51,7 @@ export class ExperienceCalculator {
                 durationElement.textContent = duration;
             } else if (endDate === 'present') {
                 const duration = this.calculateDuration(startDate, 'present');
-                item.textContent = `${item.textContent.split('—')[0]} — Present • ${duration}`;
+                item.textContent = `${item.textContent.split(/\s*[—\-]\s*/)[0]} - Present • ${duration}`;
             }
         });
     }
