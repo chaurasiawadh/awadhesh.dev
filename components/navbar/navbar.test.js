@@ -8,16 +8,19 @@ describe('Navbar Component', () => {
   let navbar;
 
   beforeEach(() => {
+    window.scrollTo = () => {};
+    window.__portfolioNavBound = false;
     document.body.innerHTML = `
       <nav>
-        <button data-nav-link>About</button>
-        <button data-nav-link>Resume</button>
-        <button data-nav-link>Portfolio</button>
+        <button data-nav-link="about">About</button>
+        <button data-nav-link="resume">Resume</button>
+        <button data-nav-link="portfolio">Portfolio</button>
       </nav>
       <article class="active" data-page="about">About Content</article>
       <article data-page="resume">Resume Content</article>
       <article data-page="portfolio">Portfolio Content</article>
     `;
+    window.history.replaceState(null, '', '/');
     navbar = new Navbar();
   });
 
@@ -50,5 +53,15 @@ describe('Navbar Component', () => {
     expect(portfolioLink.classList.contains('active')).toBe(true);
     expect(links[0].classList.contains('active')).toBe(false);
     expect(links[1].classList.contains('active')).toBe(false);
+  });
+
+  test('should open page from URL hash', () => {
+    window.location.hash = '#portfolio';
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+
+    expect(document.querySelector('[data-page="portfolio"]').classList.contains('active')).toBe(
+      true,
+    );
+    expect(document.querySelector('[data-page="about"]').classList.contains('active')).toBe(false);
   });
 });

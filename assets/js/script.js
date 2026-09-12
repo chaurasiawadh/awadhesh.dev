@@ -10,8 +10,7 @@ import { ExperienceCalculator } from '../../components/resume/ExperienceCalculat
 import { ContactForm } from '../../components/contact/ContactForm.js';
 import { Modal } from '../../components/shared/Modal.js';
 
-// Initialize all components when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   // Utility function to toggle elements
   window.elementToggleFunc = function (elem) {
     elem.classList.toggle('active');
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Portfolio image skeleton loaders
   const portfolioImages = document.querySelectorAll('.project-img img');
 
-  portfolioImages.forEach(img => {
+  portfolioImages.forEach((img) => {
     const figure = img.closest('.project-img');
 
     if (img.complete) {
@@ -63,4 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   console.log('Portfolio app initialized');
-});
+}
+
+// Modules are deferred; DOM may already be ready when this runs
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

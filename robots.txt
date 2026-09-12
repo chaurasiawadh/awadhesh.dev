@@ -1,0 +1,10 @@
+# https://awadhesh.in/robots.txt
+User-agent: *
+Allow: /
+
+# Personal portfolio — allow crawling of CSS/JS/images for rendering
+Allow: /assets/
+Allow: /components/
+
+# Sitemap
+Sitemap: https://awadhesh.in/sitemap.xml

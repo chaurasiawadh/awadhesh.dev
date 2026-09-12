@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 
+import { jest } from '@jest/globals';
 import { ExperienceCalculator } from './ExperienceCalculator';
 
 describe('ExperienceCalculator Component', () => {
